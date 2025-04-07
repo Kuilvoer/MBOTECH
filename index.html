@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Toepassingen Technologie in MBO</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Toepassingen van Technologieën in Commerciële MBO-opleidingen</h1>
+    
+    <div class="toolbar">
+      <select id="opleidingFilter"><option value="">Alle Opleidingen</option></select>
+      <select id="technologieFilter"><option value="">Alle Technologieën</option></select>
+      <select id="jaarFilter"><option value="">Alle Jaren</option></select>
+      <label><input type="checkbox" id="sortCheckbox" checked /> Jaartal</label>
+      <button onclick="resetFilters()">Reset</button>
+      <input type="text" id="zoekInput" placeholder="Zoek in toepassingen…" />
+      <button id="toggleTheme">🌙 Dark Mode</button>
+    </div>
+    
+    <p id="resultCount"></p>
+    <div id="resultaten"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

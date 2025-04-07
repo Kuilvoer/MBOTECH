@@ -1,0 +1,75 @@
+
+:root {
+  --bg: #f0f2f5;
+  --text: #333;
+  --card-bg: #fff;
+}
+body.dark {
+  --bg: #1e1e1e;
+  --text: #eee;
+  --card-bg: #2b2b2b;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 20px;
+}
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+}
+.toolbar {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0;
+  justify-content: center;
+}
+select, input[type="text"], button {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.entry {
+  background: var(--card-bg);
+  border-left: 6px solid #999;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.entry:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 0.8em;
+  border-radius: 12px;
+  color: white;
+  margin-bottom: 6px;
+}
+[data-tech="AR"] .entry { border-left-color: #27ae60; }
+[data-tech="VR"] .entry { border-left-color: #3498db; }
+[data-tech="AI"] .entry { border-left-color: #8e44ad; }
+[data-tech="IoT"] .entry { border-left-color: #f39c12; }
+[data-tech="XR"] .entry { border-left-color: #16a085; }
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
